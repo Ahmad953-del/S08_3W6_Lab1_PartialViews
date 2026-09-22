@@ -19,6 +19,7 @@ namespace ZombieParty.Controllers
         public IActionResult Index()
         {
             List<Zombie> zombiesList = _baseDonnees.Zombies.OrderBy(z => z.Name).Include(z => z.ZombieType).ToList();
+            
 
             return View(zombiesList);
         }
