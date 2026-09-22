@@ -7,10 +7,10 @@ namespace ZombieParty.Models
     {
         public int Id { get; set; }
         [StringLength(25, MinimumLength = 5)]
-        public string Title { get; set; }
+        public string? Title { get; set; }
         [StringLength(255)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         [ValidateNever]
-        public virtual List<Zombie> Zombies { get; set; }
+        public virtual List<Zombie>? Zombies { get; set; }
     }
 }
